@@ -1,4 +1,4 @@
-# First-app
+# Favorite place App
 
 #RU
 Технологический стек:
