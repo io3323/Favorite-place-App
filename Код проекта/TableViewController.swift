@@ -45,6 +45,16 @@ class TableViewController: UITableViewController {
       
         return cell
     }
+    //Mark: - Table view deleagate(Позволит вызывать различные пункты менб при свайпе ячейки с права на лево)
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let place = places[indexPath.row]
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (_, _) in
+            StorageManager.deleteObject(place)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return[deleteAction]
+    }
     //Mark: - Table view delegate (Данный метод возвращает высоту строки)
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
