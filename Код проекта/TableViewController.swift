@@ -45,7 +45,7 @@ class TableViewController: UITableViewController {
       
         return cell
     }
-    //Mark: - Table view deleagate(Позволит вызывать различные пункты менб при свайпе ячейки с права на лево)
+    // MARK: - Table view deleagate(Позволит вызывать различные пункты менб при свайпе ячейки с права на лево)
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let place = places[indexPath.row]
@@ -55,15 +55,25 @@ class TableViewController: UITableViewController {
         }
         return[deleteAction]
     }
-    //Mark: - Table view delegate (Данный метод возвращает высоту строки)
+    // MARK: - Table view delegate (Данный метод возвращает высоту строки)
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    //Mark: - Данный метод используется для возможности создания обратного перехода на главную страницу
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"{
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            let place = places[indexPath.row]
+            let newPlaceVC = segue.destination as! SecondTableViewController
+            newPlaceVC.currentPlace = place
+        }
+    }
+    // MARK: - Данный метод используется для возможности создания обратного перехода на главную страницу
     @IBAction func unwindSegue(segue:UIStoryboardSegue) {
         guard let newPlaceVC = segue.source as? SecondTableViewController else {return}
         
-        newPlaceVC.saveNewPlace()
+        newPlaceVC.savePlace()
         
   
         tableView.reloadData()
@@ -106,14 +116,10 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+    
+    
 
 }

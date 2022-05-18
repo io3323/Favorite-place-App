@@ -71,6 +71,7 @@
                                     <outlet property="locationLabel" destination="Mq7-M6-MWs" id="vyP-KE-Top"/>
                                     <outlet property="nameLabel" destination="xN9-hl-4BV" id="6lJ-28-keZ"/>
                                     <outlet property="typelabel" destination="1jJ-UD-Sou" id="Dai-uB-7xY"/>
+                                    <segue destination="HQZ-ZP-cwi" kind="show" identifier="showDetail" id="b9y-aM-gix"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,7 +98,7 @@
             <objects>
                 <tableViewController id="HQZ-ZP-cwi" customClass="SecondTableViewController" customModule="ScrolView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fEu-Qq-WfL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.87450980389999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
@@ -274,7 +275,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYD-XF-PBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="pSb-5t-pW6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3144.9275362318845" y="-149.33035714285714"/>
+            <point key="canvasLocation" x="2241" y="-149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1cH-o0-N1Y">
@@ -320,9 +321,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQx-mc-Yxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282.608695652174" y="-149.33035714285714"/>
+            <point key="canvasLocation" x="2241" y="-880"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="b9y-aM-gix"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
     </resources>
