@@ -9,6 +9,7 @@
         <!--My Places-->
         <scene sceneID="A4S-an-dOY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HcM-w7-qFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zKc-zg-xlE" customClass="TableViewController" customModule="ScrolView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="W0y-8c-0A9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -81,6 +82,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Places" id="C82-oi-KEG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="oHJ-Ei-JGf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8to-3J-Vue">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -89,7 +93,6 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HcM-w7-qFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1462.3188405797102" y="-149.33035714285714"/>
         </scene>
@@ -328,6 +331,7 @@
         <segue reference="b9y-aM-gix"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
     </resources>
 </document>
