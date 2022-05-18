@@ -20,10 +20,10 @@ Swift
 UKit
 Realm
 
+This project is completely written using TableViewController, the main task of the project is to be an aggregator of a person's favorite places.
+A person can add or delete any place he likes, he can also assign a unique photo to this place (by selecting it from the gallery or taking it in real time), as well as each place is marked on the map and at any time it will be possible to build a march to this place from your location.
+
 About the file structure in the repository:
   Project Code folder contains all project code
   The Xcode Project folder contains two Xcode project files
   The folder "Project Podfile" contains the Podfile of the project
-
-This project is completely written using TableViewController, the main task of the project is to be an aggregator of a person's favorite places.
-A person can add or delete any place he likes, he can also assign a unique photo to this place (by selecting it from the gallery or taking it in real time), as well as each place is marked on the map and at any time it will be possible to build a march to this place from your location.
