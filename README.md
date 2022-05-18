@@ -2,8 +2,8 @@
 
 #RU
 Технологический стек:
-Swift
-UKit
+Swift,
+UKit,
 Realm
 
 Данный проект полностью написан при помощи TableViewController, оновная задача проекта, быть агригатором любимых мест человека.
@@ -16,8 +16,8 @@ Realm
 
 #ENG
 Technology stack:
-Swift
-UKit
+Swift,
+UKit,
 Realm
 
 This project is completely written using TableViewController, the main task of the project is to be an aggregator of a person's favorite places.
