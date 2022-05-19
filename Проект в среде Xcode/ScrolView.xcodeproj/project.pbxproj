@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8310CBE22832AFDB009B8CC1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310CBE12832AFDB009B8CC1 /* StorageManager.swift */; };
+		8310CBE4283670D2009B8CC1 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310CBE3283670D1009B8CC1 /* RatingControl.swift */; };
 		83888CD1281EC974002EA0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CD0281EC974002EA0FD /* AppDelegate.swift */; };
 		83888CD3281EC974002EA0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CD2281EC974002EA0FD /* SceneDelegate.swift */; };
 		83888CD8281EC974002EA0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83888CD6281EC974002EA0FD /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		4888210559069826AF0E315B /* Pods_ScrolView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrolView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8310CBE12832AFDB009B8CC1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8310CBE3283670D1009B8CC1 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		83888CCD281EC974002EA0FD /* ScrolView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrolView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83888CD0281EC974002EA0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83888CD2281EC974002EA0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				83888CE6282172F6002EA0FD /* TableViewController.swift */,
 				83888CEE28226EF0002EA0FD /* PlaceModel.swift */,
 				8310CBE12832AFDB009B8CC1 /* StorageManager.swift */,
+				8310CBE3283670D1009B8CC1 /* RatingControl.swift */,
 				83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */,
 				83888CD0281EC974002EA0FD /* AppDelegate.swift */,
 				83888CD2281EC974002EA0FD /* SceneDelegate.swift */,
@@ -222,6 +225,7 @@
 				83888CF12822B5D5002EA0FD /* SecondTableViewController.swift in Sources */,
 				83888CE7282172F6002EA0FD /* TableViewController.swift in Sources */,
 				8310CBE22832AFDB009B8CC1 /* StorageManager.swift in Sources */,
+				8310CBE4283670D2009B8CC1 /* RatingControl.swift in Sources */,
 				83888CEF28226EF0002EA0FD /* PlaceModel.swift in Sources */,
 				83888CED2821ACAA002EA0FD /* CustomTableViewCell.swift in Sources */,
 				83888CD3281EC974002EA0FD /* SceneDelegate.swift in Sources */,

@@ -9,7 +9,6 @@
         <!--My Places-->
         <scene sceneID="A4S-an-dOY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HcM-w7-qFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zKc-zg-xlE" customClass="TableViewController" customModule="ScrolView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="W0y-8c-0A9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -93,6 +92,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HcM-w7-qFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1462.3188405797102" y="-149.33035714285714"/>
         </scene>
@@ -245,6 +245,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="F6Z-jM-Kxm">
+                                        <rect key="frame" x="0.0" y="527.5" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F6Z-jM-Kxm" id="SLr-zJ-dNR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-Be-LnS" customClass="RatingControl" customModule="ScrolView" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i0q-Be-LnS" firstAttribute="centerY" secondItem="SLr-zJ-dNR" secondAttribute="centerY" id="Ivn-z3-WDM"/>
+                                                <constraint firstItem="i0q-Be-LnS" firstAttribute="centerX" secondItem="SLr-zJ-dNR" secondAttribute="centerX" id="aLs-bg-5XE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -272,6 +289,7 @@
                         <outlet property="placeLocation" destination="Ty2-q3-MAV" id="dev-Ba-hs6"/>
                         <outlet property="placeName" destination="fcM-yO-q6w" id="5l1-yp-g6W"/>
                         <outlet property="placeType" destination="PRm-Tb-HCs" id="cxG-7V-Cc5"/>
+                        <outlet property="ratingControl" destination="i0q-Be-LnS" id="O1N-RC-MYW"/>
                         <outlet property="saveButton" destination="Zpr-m0-XdL" id="SDi-XS-wwb"/>
                     </connections>
                 </tableViewController>
@@ -327,6 +345,11 @@
             <point key="canvasLocation" x="2241" y="-880"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="i0q-Be-LnS">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="b9y-aM-gix"/>
     </inferredMetricsTieBreakers>

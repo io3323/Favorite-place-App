@@ -88,6 +88,10 @@ class TableViewController: UITableViewController{
         return[deleteAction]
     }
     // MARK: - Table view delegate (Данный метод возвращает высоту строки)
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
