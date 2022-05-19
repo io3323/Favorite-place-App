@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Cosmos
 
 
 class SecondTableViewController: UITableViewController {
@@ -13,6 +14,7 @@ class SecondTableViewController: UITableViewController {
 
     var currentPlace:Place!
     var imageIsChanged = false
+    var currentRating = 0.0
     
     @IBOutlet var placeImage:UIImageView!
     @IBOutlet var saveButton:UIBarButtonItem!
@@ -20,6 +22,7 @@ class SecondTableViewController: UITableViewController {
     @IBOutlet var placeLocation:UITextField!
     @IBOutlet var placeType:UITextField!
     @IBOutlet var ratingControl:RatingControl!
+    @IBOutlet var cosmosView:CosmosView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +31,12 @@ class SecondTableViewController: UITableViewController {
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
+        //cosmosView.settings.fillMode = .half
+        cosmosView.didTouchCosmos = {
+            rating in self.currentRating  = rating
+        }
     }
+    
 
     /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -84,7 +92,7 @@ class SecondTableViewController: UITableViewController {
                         location: placeLocation.text,
                         type: placeType.text,
                         imageData: imageData,
-                        rating: Double(ratingControl.rating)
+                        rating: currentRating
                             
                             )
         if currentPlace != nil {
@@ -113,7 +121,7 @@ class SecondTableViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
-            ratingControl.rating = Int(currentPlace.rating)
+            cosmosView.rating = currentPlace.rating
         }
     }
     

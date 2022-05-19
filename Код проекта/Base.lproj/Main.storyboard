@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,39 +35,70 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wxk-06-3iF">
-                                            <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                            <rect key="frame" x="96" y="8" width="208" height="69"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-hl-4BV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="302" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="208" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq7-M6-MWs">
-                                                    <rect key="frame" x="0.0" y="28.5" width="302" height="21"/>
+                                                    <rect key="frame" x="0.0" y="28.5" width="208" height="21"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-UD-Sou">
-                                                    <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="50.5" width="208" height="18.5"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="H7g-gy-fbv" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="312" y="35.5" width="90" height="14"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="OoO-g0-axF"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                    <color key="value" red="0.56550002099999996" green="0.87472063300000003" blue="0.66472053529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                    <real key="value" value="14"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="H7g-gy-fbv" firstAttribute="trailing" secondItem="djE-Xs-8W8" secondAttribute="trailingMargin" constant="8" id="26L-1k-NUo"/>
                                         <constraint firstItem="FIc-Y8-xlF" firstAttribute="centerY" secondItem="djE-Xs-8W8" secondAttribute="centerY" id="8ZK-GK-OqI"/>
+                                        <constraint firstItem="H7g-gy-fbv" firstAttribute="leading" secondItem="Wxk-06-3iF" secondAttribute="trailing" constant="8" id="Coz-Ze-BuA"/>
                                         <constraint firstAttribute="bottom" secondItem="Wxk-06-3iF" secondAttribute="bottom" constant="8" id="SAd-by-Xrk"/>
                                         <constraint firstItem="Wxk-06-3iF" firstAttribute="top" secondItem="djE-Xs-8W8" secondAttribute="top" constant="8" id="U5f-wa-aWd"/>
+                                        <constraint firstItem="H7g-gy-fbv" firstAttribute="centerY" secondItem="djE-Xs-8W8" secondAttribute="centerY" id="W6j-uS-JaB"/>
                                         <constraint firstItem="Wxk-06-3iF" firstAttribute="leading" secondItem="FIc-Y8-xlF" secondAttribute="trailing" constant="16" id="bJL-1q-Rcn"/>
                                         <constraint firstItem="FIc-Y8-xlF" firstAttribute="leading" secondItem="djE-Xs-8W8" secondAttribute="leading" constant="15" id="vDw-QT-29q"/>
-                                        <constraint firstAttribute="trailing" secondItem="Wxk-06-3iF" secondAttribute="trailing" constant="16" id="yQQ-uH-S2v"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cosmosView" destination="H7g-gy-fbv" id="AOj-nT-E7O"/>
                                     <outlet property="imageOfPlace" destination="FIc-Y8-xlF" id="sqh-Tb-UHa"/>
                                     <outlet property="locationLabel" destination="Mq7-M6-MWs" id="vyP-KE-Top"/>
                                     <outlet property="nameLabel" destination="xN9-hl-4BV" id="6lJ-28-keZ"/>
@@ -255,11 +287,39 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-Be-LnS" customClass="RatingControl" customModule="ScrolView" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Vls-Qa-BPn" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="97" y="50" width="220" height="40"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="40"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="0.56550002099999996" green="0.87472063300000003" blue="0.66472053529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Vls-Qa-BPn" firstAttribute="centerX" secondItem="SLr-zJ-dNR" secondAttribute="centerX" id="4g9-MH-aPL"/>
+                                                <constraint firstItem="Vls-Qa-BPn" firstAttribute="centerY" secondItem="SLr-zJ-dNR" secondAttribute="centerY" id="FTa-lp-rkf"/>
                                                 <constraint firstItem="i0q-Be-LnS" firstAttribute="centerY" secondItem="SLr-zJ-dNR" secondAttribute="centerY" id="Ivn-z3-WDM"/>
                                                 <constraint firstItem="i0q-Be-LnS" firstAttribute="centerX" secondItem="SLr-zJ-dNR" secondAttribute="centerX" id="aLs-bg-5XE"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="i0q-Be-LnS"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -285,6 +345,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cosmosView" destination="Vls-Qa-BPn" id="07u-wq-3lD"/>
                         <outlet property="placeImage" destination="vQb-rz-4Sm" id="QMs-hY-BB1"/>
                         <outlet property="placeLocation" destination="Ty2-q3-MAV" id="dev-Ba-hs6"/>
                         <outlet property="placeName" destination="fcM-yO-q6w" id="5l1-yp-g6W"/>
@@ -296,7 +357,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYD-XF-PBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="pSb-5t-pW6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2241" y="-149"/>
+            <point key="canvasLocation" x="2239.130434782609" y="-149.33035714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1cH-o0-N1Y">
@@ -346,6 +407,12 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="H7g-gy-fbv">
+            <size key="intrinsicContentSize" width="90" height="14"/>
+        </designable>
+        <designable name="Vls-Qa-BPn">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
         <designable name="i0q-Be-LnS">
             <size key="intrinsicContentSize" width="252" height="44"/>
         </designable>
@@ -356,5 +423,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

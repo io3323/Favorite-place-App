@@ -74,6 +74,8 @@ class TableViewController: UITableViewController{
         cell.imageView?.layer.cornerRadius = cell.frame.size.height/2
         cell.imageView?.clipsToBounds = true
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
+        cell.cosmosView.rating = place.rating
+        
       
         return cell
     }
