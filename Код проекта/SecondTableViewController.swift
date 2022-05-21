@@ -9,6 +9,7 @@ import UIKit
 import Cosmos
 
 
+
 class SecondTableViewController: UITableViewController {
     
 
@@ -50,16 +51,18 @@ class SecondTableViewController: UITableViewController {
             let photoIcon = #imageLiteral(resourceName: "photo (1)")
             
             let actionSheet = UIAlertController(title: nil, message:nil, preferredStyle: .actionSheet)
-            let camera = UIAlertAction(title: "Camera", style: .default) { _ in }
-            camera.setValue(cameraIcon, forKey: "image")
-            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+            let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+                //camera.setValue(cameraIcon, forKey: "image")
+                //camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
                 // TODO:chooseImagePicker
-            self.chooseImagePicker(source: .camera)
-            let photo = UIAlertAction(title: "Photo", style: .default) { _ in }
-            photo.setValue(photoIcon, forKey:   "image")
-            photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+                self.chooseImagePicker(source: .camera)
+            }
+            let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+                //photo.setValue(photoIcon, forKey:   "image")
+                //photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
                 // TODO: ChouseImagePicker
             self.chooseImagePicker(source: .photoLibrary)
+            }
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
                 
                 actionSheet.addAction(camera)
@@ -74,16 +77,25 @@ class SecondTableViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let mapVC = segue.destination as? MapViewControlerViewController else {return}
+        mapVC.incomeSegueIdentifire = identifier
+        mapVC.mapViewControllerDelegate = self
+        if identifier == "showPlace"{
+            
+            mapVC.place.name = placeName.text!
+            mapVC.place.location = placeLocation.text
+            mapVC.place.type = placeType.text
+            mapVC.place.imageData = placeImage.image?.pngData()
+        }
+    }
     func savePlace(){
         
         
-        var image:UIImage?
-        
-        if imageIsChanged{
-            image = placeImage.image
-        }else{
-            image = #imageLiteral(resourceName: "imagePlaceholder")
-        }
+        let image = imageIsChanged ? placeImage.image: #imageLiteral(resourceName: "imagePlaceholder")
+    
         
         let imageData = image?.pngData()
         
@@ -175,11 +187,19 @@ extension SecondTableViewController:UIImagePickerControllerDelegate, UINavigatio
             placeImage.clipsToBounds = true
            
            imageIsChanged = true
-            dismiss(animated: true)
+           dismiss(animated: true)
             
         }
         
         
 
 }
+}
+extension SecondTableViewController:MapViewControlerViewControllerDelegate{
+    
+    func getAddress(_ address: String?) {
+        placeLocation.text = address
+    }
+    
+    
 }

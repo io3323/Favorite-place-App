@@ -18,6 +18,7 @@
 		83888CED2821ACAA002EA0FD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */; };
 		83888CEF28226EF0002EA0FD /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CEE28226EF0002EA0FD /* PlaceModel.swift */; };
 		83888CF12822B5D5002EA0FD /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */; };
+		83F54EFC2838FAAA00447BDD /* MapViewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */; };
 		FC3C2C638433EAAFC5AD3308 /* Pods_ScrolView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4888210559069826AF0E315B /* Pods_ScrolView.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		83888CEE28226EF0002EA0FD /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControlerViewController.swift; sourceTree = "<group>"; };
 		F16BDDE2854189A3A172EA8A /* Pods-ScrolView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrolView.debug.xcconfig"; path = "Target Support Files/Pods-ScrolView/Pods-ScrolView.debug.xcconfig"; sourceTree = "<group>"; };
 		FF4D71E5D1DFAFDD5699D5F0 /* Pods-ScrolView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrolView.release.xcconfig"; path = "Target Support Files/Pods-ScrolView/Pods-ScrolView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				83888CD0281EC974002EA0FD /* AppDelegate.swift */,
 				83888CD2281EC974002EA0FD /* SceneDelegate.swift */,
 				83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */,
+				83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */,
 				83888CD6281EC974002EA0FD /* Main.storyboard */,
 				83888CD9281EC977002EA0FD /* Assets.xcassets */,
 				83888CDB281EC977002EA0FD /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83888CD1281EC974002EA0FD /* AppDelegate.swift in Sources */,
+				83F54EFC2838FAAA00447BDD /* MapViewControlerViewController.swift in Sources */,
 				83888CF12822B5D5002EA0FD /* SecondTableViewController.swift in Sources */,
 				83888CE7282172F6002EA0FD /* TableViewController.swift in Sources */,
 				8310CBE22832AFDB009B8CC1 /* StorageManager.swift in Sources */,
