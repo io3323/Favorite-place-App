@@ -19,6 +19,7 @@
 		83888CEF28226EF0002EA0FD /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CEE28226EF0002EA0FD /* PlaceModel.swift */; };
 		83888CF12822B5D5002EA0FD /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */; };
 		83F54EFC2838FAAA00447BDD /* MapViewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */; };
+		83F54EFE283A7D1600447BDD /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F54EFD283A7D1600447BDD /* MapManager.swift */; };
 		FC3C2C638433EAAFC5AD3308 /* Pods_ScrolView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4888210559069826AF0E315B /* Pods_ScrolView.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,11 +34,12 @@
 		83888CD9281EC977002EA0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83888CDC281EC977002EA0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83888CDE281EC977002EA0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83888CE6282172F6002EA0FD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		83888CE6282172F6002EA0FD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		83888CEE28226EF0002EA0FD /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControlerViewController.swift; sourceTree = "<group>"; };
+		83F54EFD283A7D1600447BDD /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		F16BDDE2854189A3A172EA8A /* Pods-ScrolView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrolView.debug.xcconfig"; path = "Target Support Files/Pods-ScrolView/Pods-ScrolView.debug.xcconfig"; sourceTree = "<group>"; };
 		FF4D71E5D1DFAFDD5699D5F0 /* Pods-ScrolView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrolView.release.xcconfig"; path = "Target Support Files/Pods-ScrolView/Pods-ScrolView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,21 +85,62 @@
 		83888CCF281EC974002EA0FD /* ScrolView */ = {
 			isa = PBXGroup;
 			children = (
-				83888CE6282172F6002EA0FD /* TableViewController.swift */,
-				83888CEE28226EF0002EA0FD /* PlaceModel.swift */,
-				8310CBE12832AFDB009B8CC1 /* StorageManager.swift */,
-				8310CBE3283670D1009B8CC1 /* RatingControl.swift */,
-				83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */,
-				83888CD0281EC974002EA0FD /* AppDelegate.swift */,
-				83888CD2281EC974002EA0FD /* SceneDelegate.swift */,
-				83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */,
-				83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */,
-				83888CD6281EC974002EA0FD /* Main.storyboard */,
-				83888CD9281EC977002EA0FD /* Assets.xcassets */,
-				83888CDB281EC977002EA0FD /* LaunchScreen.storyboard */,
-				83888CDE281EC977002EA0FD /* Info.plist */,
+				83F54EFF283A8AB000447BDD /* ViewControllers */,
+				83F54F01283A8B0600447BDD /* Helpers */,
+				83F54F00283A8AED00447BDD /* Models */,
+				83F54F02283A8B2100447BDD /* Support Files */,
+				83F54F03283A8B4100447BDD /* IBuilder */,
 			);
 			path = ScrolView;
+			sourceTree = "<group>";
+		};
+		83F54EFF283A8AB000447BDD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83888CF02822B5D5002EA0FD /* SecondTableViewController.swift */,
+				83F54EFB2838FAAA00447BDD /* MapViewControlerViewController.swift */,
+				83888CE6282172F6002EA0FD /* TableViewController.swift */,
+				83888CEC2821ACAA002EA0FD /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83F54F00283A8AED00447BDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83888CEE28226EF0002EA0FD /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83F54F01283A8B0600447BDD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83F54EFD283A7D1600447BDD /* MapManager.swift */,
+				8310CBE12832AFDB009B8CC1 /* StorageManager.swift */,
+				8310CBE3283670D1009B8CC1 /* RatingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83F54F02283A8B2100447BDD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83888CD0281EC974002EA0FD /* AppDelegate.swift */,
+				83888CD2281EC974002EA0FD /* SceneDelegate.swift */,
+				83888CD9281EC977002EA0FD /* Assets.xcassets */,
+				83888CDE281EC977002EA0FD /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		83F54F03283A8B4100447BDD /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				83888CD6281EC974002EA0FD /* Main.storyboard */,
+				83888CDB281EC977002EA0FD /* LaunchScreen.storyboard */,
+			);
+			path = IBuilder;
 			sourceTree = "<group>";
 		};
 		CE956315D367B1225B3DD02E /* Pods */ = {
@@ -230,6 +273,7 @@
 				83888CE7282172F6002EA0FD /* TableViewController.swift in Sources */,
 				8310CBE22832AFDB009B8CC1 /* StorageManager.swift in Sources */,
 				8310CBE4283670D2009B8CC1 /* RatingControl.swift in Sources */,
+				83F54EFE283A7D1600447BDD /* MapManager.swift in Sources */,
 				83888CEF28226EF0002EA0FD /* PlaceModel.swift in Sources */,
 				83888CED2821ACAA002EA0FD /* CustomTableViewCell.swift in Sources */,
 				83888CD3281EC974002EA0FD /* SceneDelegate.swift in Sources */,
