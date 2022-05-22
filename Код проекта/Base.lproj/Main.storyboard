@@ -461,6 +461,14 @@
                                     <action selector="doneButtonPress" destination="F40-XT-u6w" eventType="touchUpInside" id="Of3-qI-gcL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOp-5M-ZIS">
+                                <rect key="frame" x="170" y="711" width="74" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="F40-XT-u6w" eventType="touchUpInside" id="u9Z-8p-93U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wvn-Vo-kd8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -469,6 +477,7 @@
                             <constraint firstItem="Wvn-Vo-kd8" firstAttribute="trailing" secondItem="gU0-yx-0jT" secondAttribute="trailing" constant="40" id="8ri-nk-0l9"/>
                             <constraint firstItem="Wvn-Vo-kd8" firstAttribute="trailing" secondItem="7Uq-lx-Zn6" secondAttribute="trailing" constant="40" id="9Va-an-q1e"/>
                             <constraint firstItem="K67-03-crF" firstAttribute="leading" secondItem="Wvn-Vo-kd8" secondAttribute="leading" id="A8z-Pa-1iQ"/>
+                            <constraint firstItem="SOp-5M-ZIS" firstAttribute="centerY" secondItem="sVZ-1S-Y66" secondAttribute="centerY" id="AOx-Pg-7kV"/>
                             <constraint firstItem="Wvn-Vo-kd8" firstAttribute="bottom" secondItem="gU0-yx-0jT" secondAttribute="bottom" constant="40" id="AXY-YW-frY"/>
                             <constraint firstItem="K67-03-crF" firstAttribute="trailing" secondItem="Wvn-Vo-kd8" secondAttribute="trailing" id="E8n-od-NIc"/>
                             <constraint firstItem="Wvn-Vo-kd8" firstAttribute="bottom" secondItem="sVZ-1S-Y66" secondAttribute="bottom" constant="40" id="FuI-FK-tnz"/>
@@ -482,6 +491,7 @@
                             <constraint firstItem="HPU-de-CgG" firstAttribute="trailing" secondItem="Wvn-Vo-kd8" secondAttribute="trailing" id="aFe-KU-O0H"/>
                             <constraint firstItem="zMY-GH-05I" firstAttribute="centerY" secondItem="Z5b-9q-6Eq" secondAttribute="centerY" constant="-20" id="i6c-BN-jX0"/>
                             <constraint firstItem="Wvn-Vo-kd8" firstAttribute="bottom" secondItem="ivH-HG-0kG" secondAttribute="bottom" constant="40" id="nSp-6M-5tM"/>
+                            <constraint firstItem="SOp-5M-ZIS" firstAttribute="centerX" secondItem="Z5b-9q-6Eq" secondAttribute="centerX" id="rca-8C-N1s"/>
                             <constraint firstAttribute="bottom" secondItem="K67-03-crF" secondAttribute="bottom" id="rdG-y0-E5V"/>
                             <constraint firstItem="7Uq-lx-Zn6" firstAttribute="top" secondItem="Wvn-Vo-kd8" secondAttribute="top" constant="40" id="yMS-yA-rFh"/>
                         </constraints>
@@ -489,6 +499,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="HPU-de-CgG" id="owY-5G-2gN"/>
                         <outlet property="doneButton" destination="sVZ-1S-Y66" id="ke1-vH-vva"/>
+                        <outlet property="goButton" destination="SOp-5M-ZIS" id="bnk-JR-1e4"/>
                         <outlet property="mapPinImage" destination="zMY-GH-05I" id="SSt-lY-3o3"/>
                         <outlet property="mapView" destination="K67-03-crF" id="huO-Za-4gG"/>
                     </connections>
@@ -561,6 +572,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="Pin" width="42" height="42"/>
